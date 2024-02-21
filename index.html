@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ]
+    <meta
+      name="description"
+      content="Step into the mind of Octavian Johnson. Designer, illustrator, programmer, and...roller skater?"
+    />
+    <meta name="theme-color" content="#68287a" />
+    <title>welcome | octavian designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/queries.css" />
+  </head>
+  <body class="homePage">
+    <div class="container">
+      <!--MENU FOR MOBILE USERS-->
+      <div class="mobileMenu">
+        <a href="index.html">
+          <img
+            src="/img/purpOcto-01.svg"
+            alt="purple octopus no text"
+            class="mobileMenuLogo"
+          />
+        </a>
+
+        <ul class="mobileList">
+          <a class="mobNavLink" href="#sectionHome">home</a>
+          <li><a class="mobNavLink" href="#sectionWork">work</a></li>
+          <li>
+            <a class="mobNavLink" href="#sectionAbout">about</a>
+          </li>
+          <li>
+            <a class="mobNavLink" href="#sectionContact">contact</a>
+          </li>
+        </ul>
+
+        <div class="socials">
+          <ion-icon class="icon social" name="logo-instagram"></ion-icon>
+          <ion-icon class="icon social" name="logo-linkedin"></ion-icon>
+          <ion-icon class="icon social" name="logo-github"></ion-icon>
+          <ion-icon class="icon social" name="logo-tiktok"></ion-icon>
+        </div>
+        <div class="close">
+          <button class="btn closeBtn">
+            <ion-icon class="closeIcon" name="close-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <!--MENU FOR MOBILE USERS END-->
+
+      <!--MOBILE FILTER MENU START-->
+      <div class="mobileFilterMenu">
+        <ul class="mobileList">
+          <!--<p>filters</p>-->
+          <li><a class="mobNavLink filterLink all" href="#">all</a></li>
+          <li>
+            <a class="mobNavLink filterLink design" href="#">design</a>
+          </li>
+          <li><a class="mobNavLink filterLink web" href="#">web</a></li>
+          <li>
+            <a class="mobNavLink filterLink illustration" href="#"
+              >illustration</a
+            >
+          </li>
+          <li>
+            <a class="mobNavLink filterLink animation" href="#">animation</a>
+          </li>
+          <li>
+            <a class="mobNavLink filterLink photography" href="#"
+              >photography</a
+            >
+          </li>
+        </ul>
+
+        <div class="close">
+          <button class="btn closeBtn">
+            <ion-icon class="closeIcon" name="close-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <!--MOBILE FILTER MENU END-->
+
+      <!--MAIN MENU-->
+      <aside class="sideBar">
+        <div class="logoNav">
+          <a href="index.html">
+            <img
+              src="/img/purpOcto-01.svg"
+              alt="purple octopus no text"
+              class="logo"
+            />
+          </a>
+
+          <nav class="mainNav">
+            <ul>
+              <li class="home active">
+                <a class="navLink homeLink" href="">home</a>
+              </li>
+              <li class="work">
+                <a class="navLink workLink" href="#sectionWork">work</a>
+              </li>
+              <li class="about">
+                <a class="navLink aboutLink" href="#sectionAbout">about</a>
+              </li>
+              <li class="contact">
+                <a class="navLink contactLink" href="#sectionContact"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/octaviandesigns/"
+            ><ion-icon class="icon social" name="logo-instagram"></ion-icon
+          ></a>
+
+          <a href="https://www.linkedin.com/in/octavianjohnson/"
+            ><ion-icon class="icon social" name="logo-linkedin"></ion-icon
+          ></a>
+
+          <a href="https://github.com/octavianj"
+            ><ion-icon class="icon social" name="logo-github"></ion-icon
+          ></a>
+
+          <a href="https://www.tiktok.com/@octaviandesigns"
+            ><ion-icon class="icon social" name="logo-tiktok"></ion-icon
+          ></a>
+        </div>
+      </aside>
+      <!--MAIN MENU END-->
+
+      <!--MAIN CONTENT-->
+      <main class="mainContent" id="scrollable">
+        <button class="btn menuBtn mobileMenuBtn">
+          <ion-icon class="menuIcon" name="menu-outline"></ion-icon>
+        </button>
+
+        <a href="index.html#sectionHome">
+          <img
+            src="/img/purpOcto-01.svg"
+            alt="purple octopus no text"
+            class="logoMobile"
+            id="logoMobile"
+          />
+        </a>
+        <!--HOME SECTION START-->
+        <section class="section sectionHome" id="sectionHome">
+          <div class="homeText">
+            <h1 class="homeHeading">Octavian creates sometimes.</h1>
+            <h3 class="secondaryHomeHeading">Let's work together!</h3>
+            <a class="em" href="mailto:octaviandesigns@gmail.com"
+              ><button class="btn purple">
+                <p class="btnText">Shoot me an email</p>
+                <ion-icon
+                  class="icon plane"
+                  name="send-outline"
+                ></ion-icon></button
+            ></a>
+          </div>
+          <ion-icon
+            class="icon arrowDown"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </section>
+        <!--HOME SECTION END-->
+
+        <!--WORK SECTION START-->
+        <section class="section sectionWork" id="sectionWork">
+          <!--realized my auto scroll thing was wild so here's two buttons to slide the work-->
+          <button class="galleryBtn slideLeft" id="slideLeft" type="button">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="galleryBtn slideRight" id="slideRight" type="button">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+          <div class="filterMenu">
+            <ul class="filterList">
+              <li class="filterItem filterAll"><a href="#">all</a></li>
+              <li class="filterItem filterDesign"><a href="#">design</a></li>
+              <li class="filterItem filterWeb"><a href="#">web</a></li>
+              <li class="filterItem filterIllustration">
+                <a href="#">illustration</a>
+              </li>
+              <li class="filterItem filterAnimation">
+                <a href="#">animation</a>
+              </li>
+              <li class="filterItem filterPhotography">
+                <a href="#">photography</a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="btn menuBtn filterBtn">
+            <ion-icon class="menuIcon" name="funnel-outline"></ion-icon>
+          </button>
+
+          <div class="gallery">
+            <!--GALLERY ITEM-->
+            <a href="projects/od40.html" class="galleryItem" data-cat="web">
+              <div class="galleryImg">
+                <img
+                  src="/img/work/od40.webp"
+                  alt="octavian designs web phone "
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">welcome to octavian designs 4.0!</div>
+                  <p class="imgTags">web</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <!-- <a href="/projects/csSite.html" class="galleryItem" data-cat="web">
+              <div class="galleryImg">
+                <img
+                  src="/img/work/csMockup.webp"
+                  alt="ttc conference services mockup phone"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">
+                    trident tech conference services website
+                  </div>
+                  <p class="imgTags">web</p>
+                </div>
+              </div>
+            </a> -->
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="projects/yinyang.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/yinyang-01.webp"
+                  alt="yinyang"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Yin Yang</div>
+                  <p class="imgTags">Illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="projects/ttciso.html"
+              class="galleryItem"
+              data-cat="animation"
+            >
+              <div class="galleryImg">
+                <img src="/img/work/iso-01.webp" alt="iso" class="img" />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">
+                    Trident Tech ISO High School Campaign
+                  </div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div></a
+            >
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="projects/scatc.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img src="/img/work/scatc-01.webp" alt="SCATC" class="img" />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">scatc art project</div>
+                  <p class="imgTags">illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a href="projects/paint.html" class="galleryItem" data-cat="design">
+              <div class="galleryImg">
+                <img src="/img/work/paint-01.webp" alt="paint" class="img" />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">paint</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/richardson.html"
+              class="galleryItem"
+              data-cat="photography"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/richardson-01.webp"
+                  alt="richardson photo shoot"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">richardson family photoshoot</div>
+                  <p class="imgTags">photography</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/witherspoon.html"
+              class="galleryItem"
+              data-cat="photography"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/kiss.gif"
+                  alt="witherspoon wedding"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">witherspoon wedding</div>
+                  <p class="imgTags">photography</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/jjk.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/boogiewoogie-01.webp"
+                  alt="tanjiro"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Jujutsu Kaisen: Boogie Woogie</div>
+                  <p class="imgTags">illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/inosuke.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/inosuke-01.webp"
+                  alt="inosuke"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Demon Slayer: Inosuke</div>
+                  <p class="imgTags">illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/tanjiro.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/tanjiro-01.webp"
+                  alt="tanjiro"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Demon Slayer: Tanjiro</div>
+                  <p class="imgTags">illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/bpw.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/bpw-01.webp"
+                  alt="black panther warrior"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Black Panther Warrior #1</div>
+                  <p class="imgTags">illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/blackart.html"
+              class="galleryItem"
+              data-cat="design"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/baMag-01.webp"
+                  alt="black art magazine"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Black Art Magazine</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/cars.html"
+              class="galleryItem"
+              data-cat="photography"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/carsCoffee-01.webp"
+                  alt="cars and coffee"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Charleston Cars & Coffee 8.7.21</div>
+                  <p class="imgTags">photography</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a href="/projects/od.html" class="galleryItem" data-cat="design">
+              <div class="galleryImg">
+                <img
+                  src="/img/work/od-01.webp"
+                  alt="octavian designs"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">octavian designs personal id</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a href="/projects/bhc.html" class="galleryItem" data-cat="design">
+              <div class="galleryImg">
+                <img
+                  src="/img/work/bhpc-01.webp"
+                  alt="black history playing cards"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">black history playing cards</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/grind.html"
+              class="galleryItem"
+              data-cat="design"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/grind-01.webp"
+                  alt="grind coffee shop"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">the grind coffee shop</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/space.html"
+              class="galleryItem"
+              data-cat="design"
+            >
+              <div class="galleryImg">
+                <img src="/img/work/space-01.webp" alt="space" class="img" />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">space</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/cc.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/cultureCross-01.webp"
+                  alt="culture cross"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">culture cross</div>
+                  <p class="imgTags">ilustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/rgb.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img src="/img/work/rbg-01.webp" alt="rbg" class="img" />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">RBG project</div>
+                  <p class="imgTags">ilustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/norse.html"
+              class="galleryItem"
+              data-cat="design"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/norse-01.webp"
+                  alt="norse book covers"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Norse Mythology Book Covers</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/navigate.html"
+              class="galleryItem"
+              data-cat="design"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/navigate-01.webp"
+                  alt="navigate"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">trident tech navigate branding</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="projects/acetrail.html"
+              class="galleryItem"
+              data-cat="design"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/acetrail-01.webp"
+                  alt="ace trail"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">ace trail posters</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="projects/arkham.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/arkham-01.webp"
+                  alt="arkham knight"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Arkham Knight Poster</div>
+                  <p class="imgTags">ilustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a href="/projects/bmm.html" class="galleryItem" data-cat="design">
+              <div class="galleryImg">
+                <img
+                  src="/img/work/bmm-01.webp"
+                  alt="black minds matter"
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Black Minds Matter Ad Campaign</div>
+                  <p class="imgTags">design</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+
+            <!--GALLERY ITEM-->
+            <a
+              href="/projects/ghostLamar.html"
+              class="galleryItem"
+              data-cat="illustration"
+            >
+              <div class="galleryImg">
+                <img
+                  src="/img/work/lamarghost-01.webp"
+                  alt="lamar & ghost "
+                  class="img"
+                />
+
+                <div class="imgOverlay imgOverlayBlur">
+                  <div class="imgTitle">Lamar & Ghost Children's Book</div>
+                  <p class="imgTags">illustration</p>
+                </div>
+              </div>
+            </a>
+            <!--GALLERY ITEM END-->
+          </div>
+        </section>
+        <!--WORK SECTION END-->
+
+        <!--ABOUT SECTION START-->
+        <section class="section sectionAbout" id="sectionAbout">
+          <div class="aboutMe">
+            <div class="aboutSectionOne">
+              <div class="wrap">
+                <div class="aboutText">
+                  <h4 class="pageSecondaryHeading">
+                    talking about myself is awkward
+                  </h4>
+                  <h2 class="pageHeading">about</h2>
+
+                  <!--Image frame-->
+                  <div class="frame stealth">
+                    <img
+                      src="/img/me.jpg"
+                      alt="octvian johnson"
+                      class="aboutMainImg"
+                    />
+                  </div>
+
+                  <p class="pageBody">
+                    What's up? If you've made it this far, you for checking out
+                    my website! If not, well I guess you won't see this now will
+                    you? Anyways, my name is Octavian Johnson and I am a
+                    *inhales* web designer, graphic designer, programmer,
+                    illustrator, animator, photographer, videographer and
+                    halfway decent roller skater. Follow me on social media and
+                    tell me what anime I should watch next!
+                  </p>
+                  <div class="aboutSocial">
+                    <a href="https://www.instagram.com/octaviandesigns/"
+                      ><ion-icon
+                        class="icon social"
+                        name="logo-instagram"
+                      ></ion-icon
+                    ></a>
+
+                    <a href="https://www.linkedin.com/in/octavianjohnson/"
+                      ><ion-icon
+                        class="icon social"
+                        name="logo-linkedin"
+                      ></ion-icon
+                    ></a>
+
+                    <a href="https://github.com/octavianj"
+                      ><ion-icon
+                        class="icon social"
+                        name="logo-github"
+                      ></ion-icon
+                    ></a>
+
+                    <a href="https://www.tiktok.com/@octaviandesigns"
+                      ><ion-icon
+                        class="icon social"
+                        name="logo-tiktok"
+                      ></ion-icon
+                    ></a>
+                  </div>
+                </div>
+
+                <!--Image frame-->
+                <div class="frame main">
+                  <img
+                    src="/img/me.jpg"
+                    alt="octvian johnson"
+                    class="aboutMainImg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="aboutSectionTwo">
+              <div class="wrap">
+                <div class="frame">
+                  <img
+                    src="/img/me2-01.jpg"
+                    alt="octvian johnson"
+                    class="aboutSecondImg"
+                  />
+                </div>
+
+                <p class="pageBody">
+                  I made this about page pretty long so I guess I'll tell you a
+                  bit more about myself. I was born in Sumter, South Carolina in
+                  '91 and I'm currently living in Charleston, South Carolina.
+                  I've never been one to shy away from learning new things and I
+                  have no problem taking the time to do so (hence the roller
+                  skating thing). I have no doubt that I can help you with your
+                  projects.
+                  <br />
+                  <br />
+
+                  Thanks to my dad, I've been drawing since I was a kid. I've
+                  been doing graphic design for about 10 years now and I am
+                  currently transitiong into the programming/web development
+                  space. I love taking photos and I'm actually hoping to upgrade
+                  my camera soon.<br /><br />
+
+                  I've always been an overachiever and a bit of a perfectionist,
+                  which shows in my work. If there's something I don't know, I
+                  take the time to learn how to do it to the best of my ability
+                  to give the best output possible.
+                </p>
+              </div>
+            </div>
+            <div class="aboutSectionThree">
+              <div class="wrap">
+                <h3 class="boxName">the cool stuff</h3>
+
+                <div class="aboutList">
+                  <div class="item">
+                    <div class="i"><ion-icon name="tv-outline"></ion-icon></div>
+                    <div class="itemText">
+                      <div class="itemName">anime</div>
+                      <div class="pageBody">
+                        Current favorites: JoJo's Bizarre Adventure, Full Metal
+                        Alchemist: Brotherhood (watching currently), Trigun,
+                        Samurai Champloo, Attack on Titan and Jujutsu Kaisen
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="i">
+                      <ion-icon name="airplane-outline"></ion-icon>
+                    </div>
+                    <div class="itemText">
+                      <div class="itemName">traveling</div>
+                      <div class="pageBody">
+                        I long for the day that I'm able to travel out of the
+                        country and experience cultures and communities that are
+                        different from mine. I love nature and I hope to travel
+                        somewhere soon where I can begin to dabble in landscape
+                        shots.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="i">
+                      <ion-icon name="walk-outline"></ion-icon>
+                    </div>
+                    <div class="itemText">
+                      <div class="itemName">roller skating</div>
+                      <div class="pageBody">
+                        I was serious about the roller skating thing. I
+                        currently try to rollerskate a couple times a week.
+                        Slowly getting better!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="i">
+                      <ion-icon name="game-controller-outline"></ion-icon>
+                    </div>
+                    <div class="itemText">
+                      <div class="itemName">video games</div>
+                      <div class="pageBody">
+                        Video games have kept/keep me sane. I play PS4 (soon to
+                        be PS5) and PC. My PC setup is being updated as we
+                        speak! So excited!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--ABOUT SECTION END-->
+
+        <!--CONTACT SECTION START-->
+        <section class="sectionContact section" id="sectionContact">
+          <div class="contactContent">
+            <div class="contactLinks">
+              <div class="cLinks">
+                <h4 class="pageSecondaryHeading">
+                  let's be friends (for real)
+                </h4>
+                <h2 class="pageHeading">contact</h2>
+
+                <div class="pageBody">
+                  No joke! Hit me up and let's chat. Shoot me an email or follow
+                  me on my socials:
+                </div>
+
+                <div class="cSocials">
+                  <a href="mailto:octaviandesigns@gmail.com"
+                    ><ion-icon class="icon" name="mail-outline"></ion-icon
+                  ></a>
+
+                  <a href="https://www.instagram.com/octaviandesigns/"
+                    ><ion-icon class="icon" name="logo-instagram"></ion-icon
+                  ></a>
+
+                  <a href="https://www.linkedin.com/in/octavianjohnson/"
+                    ><ion-icon class="icon" name="logo-linkedin"></ion-icon
+                  ></a>
+
+                  <a href="https://github.com/octavianj"
+                    ><ion-icon class="icon" name="logo-github"></ion-icon
+                  ></a>
+
+                  <a href="https://www.tiktok.com/@octaviandesigns"
+                    ><ion-icon class="icon" name="logo-tiktok"></ion-icon
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="contactImg">
+              <img src="/img/spaceOctopus_smaller-01.jpg" alt="contact img" />
+            </div>
+          </div>
+        </section>
+        <!--CONTACT SECTION END-->
+      </main>
+      <!--MAIN CONTENT END-->
+    </div>
+
+    <!--JAVASCRIPT-->
+
+    <script src="/js/script.js"></script>
+    <script src="/js/home.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

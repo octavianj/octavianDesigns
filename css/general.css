@@ -1,0 +1,1283 @@
+/**************************************/
+/*VARIABLES*/
+/**************************************/
+:root {
+  --mainBlue: #1c7a92;
+  --mainPurple: #68287a;
+  --darkPurple: #180f1b;
+  --darkPurpleShadow: #180f1b75;
+  --lightBlueGreen: #65c6bb;
+  --darkBlue: #1d6b7f;
+  --defaultLineHeight: 1;
+  --defaultBtnText: 1.8rem;
+  --defaultMarginTop: 7rem;
+}
+/**************************************/
+/*RESET*/
+/**************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Setting rem dimensions for responsiveness 1 rem = default browser font size which is 16px
+by setting font size to 62.5% of default, that makes 1rem = 10px (if default is 16) which is easier to manage 
+while also not affecting people that need to change  the brower font size*/
+html {
+  font-size: 62.5%;
+  cursor: url("/img/cursor-01.png"), url("/img/octo.cur"), default;
+  scroll-behavior: smooth;
+}
+
+body,
+.form > * {
+  font-family: "Poppins", sans-serif;
+  line-height: var(--defaultLineHeight);
+  font-weight: 400;
+}
+
+/**************************************/
+/*GENERAL*/
+/**************************************/
+
+.sectionHome,
+.sectionWork,
+.sectionAbout,
+.sectionContact {
+  /* scroll-snap-align: start; */
+}
+
+title {
+  text-transform: lowercase;
+}
+.sectionHome {
+  background-image: url(/img/spaceOctopus_smaller-01.jpg);
+  background-position: right;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  padding: 2em;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+
+  margin-top: -1rem;
+}
+
+.logoMobile {
+  display: none;
+}
+
+.sideBar {
+  background-color: var(--lightBlueGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.mainContent,
+.mainProjectContent {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  scroll-snap-type: y mandatory;
+}
+
+.sectionHome,
+.sectionContact {
+  height: 100vh;
+}
+
+.sectionHome {
+  display: flex;
+}
+
+.sectionWork {
+  position: relative;
+  overflow: hidden;
+  height: 96vh;
+}
+
+.blue {
+  color: var(--darkBlue);
+}
+
+.blueBG {
+  background-color: var(--darkBlue);
+}
+
+.purple {
+  background-color: var(--mainPurple);
+}
+
+.darkPurple {
+  background-color: var(--darkPurple);
+}
+
+.dark {
+  background-color: var(--darkProjectColor);
+  color: var(--lightProjectColor);
+}
+
+.light {
+  background-color: var(--lightProjectColor);
+  color: var(--darkProjectColor);
+}
+
+.homeHeading {
+  font-size: 9.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.secondaryHomeHeading {
+  font-size: 4.7rem;
+  font-weight: 300;
+  color: white;
+}
+
+.pageHeading {
+  font-size: 10rem;
+  font-weight: 600;
+}
+
+.pageSecondaryHeading,
+.projectDescHeader {
+  font-size: 2.8rem;
+  font-weight: 200;
+  min-width: 30rem;
+}
+
+.pageSecondaryHeading {
+  color: var(--lightBlueGreen);
+}
+
+.projectDescHeader {
+  font-size: 3.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.pageBody {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-top: 1rem;
+  line-height: 3rem;
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  width: 26rem;
+  margin-top: var(--defaultMarginTop);
+  height: 5rem;
+  border-radius: 100rem;
+  border: none;
+
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+.sectionHome .btn {
+  width: 30rem;
+  height: 6rem;
+  font-size: 2.2rem;
+  margin-top: 5rem;
+}
+
+/* .filter {
+  position: absolute;
+  bottom: 8rem;
+  right: -5rem;
+  z-index: 1;
+} */
+
+.filterMenu,
+.filterBtn {
+  position: absolute;
+
+  z-index: 12;
+}
+
+.filterBtn {
+  bottom: -25px;
+  right: -21px;
+  z-index: 13;
+}
+
+.filterBtn .menuIcon {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filterMenu {
+  height: 6%;
+  width: 75rem;
+  display: flex;
+  background-color: var(--mainPurple);
+  align-items: center;
+  bottom: 0;
+  right: -67rem;
+  border-radius: 500rem;
+  transition: all 0.3s ease;
+}
+
+.filter {
+  right: 9rem;
+}
+
+.filterList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 25%;
+  margin-right: 14%;
+}
+
+.filterItem {
+  padding: 1rem;
+  text-align: center;
+}
+
+.filterItem:hover {
+  background-color: var(--darkPurple);
+  transition: background-color 0.3s;
+}
+
+.filterItem a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.4rem;
+}
+
+.menuBtn {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  background-color: var(--mainPurple);
+}
+
+.menuBtn .menuIcon {
+  font-size: 4rem;
+}
+
+.mobileMenu,
+.mobileMenuBtn,
+.mobileFilterMenu {
+  display: none;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.btn:hover {
+  background-color: var(--darkPurple);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+  /* display: none; do this after figuring out scroll stuff*/
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--mainBlue) var(--mainPurple);
+}
+*::-webkit-scrollbar-track {
+  opacity: 0;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--mainPurple);
+  border-radius: 20px;
+}
+
+.stealth {
+  display: none;
+}
+
+/**************************************/
+/*SIDEBAR*/
+/**************************************/
+
+.logoNav {
+  flex-basis: 60%;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.em {
+  text-decoration: none;
+}
+
+.mainNav,
+.mainNav ul {
+  width: 100%;
+}
+
+.mainNav ul li {
+  list-style-type: none;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mainNav ul li:hover {
+  background-color: var(--darkPurple);
+  width: 100%;
+  color: var(--lightBlueGreen);
+
+  transition: all 0.3s;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--darkPurple);
+  font-size: 2.4rem;
+  position: relative;
+}
+
+.navLink:hover {
+  font-weight: bold;
+  color: var(--lightBlueGreen);
+}
+
+.navLink::after {
+  content: "";
+  padding: 50px;
+  position: absolute;
+  left: 24px;
+  transform: translateX(-50%);
+  width: 236%;
+  top: -21px;
+}
+
+.active {
+  background-color: var(--darkPurple);
+  font-weight: bold;
+}
+
+.active a {
+  color: var(--lightBlueGreen);
+}
+
+.logo {
+  width: 20rem;
+}
+
+.socials {
+  position: absolute;
+  bottom: 4em;
+  width: 100%;
+  color: var(--darkBlue);
+
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.social {
+  font-size: 4rem;
+  color: var(--darkBlue);
+  width: 8rem;
+}
+
+.social:hover {
+  color: var(--darkPurple);
+  transition: all 0.3;
+}
+
+/**************************************/
+/*HOME*/
+/**************************************/
+
+.sectionHome {
+  display: flex;
+  align-items: center;
+}
+
+.homeText {
+  min-width: 20rem;
+  max-width: 82rem;
+  margin-left: 7rem;
+}
+
+.btnText {
+  display: inline-block;
+}
+
+.arrowDown {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  font-size: 8rem;
+  transform: translateX(-50%);
+  color: white;
+}
+
+/**************************************/
+/*WORK*/
+/**************************************/
+
+.gallery {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100vh;
+  padding: 2rem;
+  scroll-behavior: smooth;
+}
+
+.galleryBtn {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  width: 9rem;
+  height: 20rem;
+  border-radius: 5rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  background-color: #180f1b8c;
+  transform: translateY(-50%);
+}
+
+.galleryBtn:hover {
+  background-color: var(--darkPurple);
+}
+
+.slideRight {
+  right: 4rem;
+}
+
+.slideLeft {
+  left: 2rem;
+}
+
+.slider .slideRight,
+.slider .slideLeft {
+  background-color: var(--darkProjectColor);
+  opacity: 0.6;
+}
+
+.slider .slideRight:hover,
+.slider .slideLeft:hover {
+  background-color: var(--lightProjectColor);
+}
+
+.galleryImg {
+  position: relative;
+  width: 25vw;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.imgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.imgOverlayBlur {
+  backdrop-filter: blur(5px);
+}
+
+.imgOverlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.imgOverlay:hover {
+  opacity: 1;
+}
+
+.imgOverlay:hover > * {
+  transform: translateY(0);
+}
+
+.imgTitle {
+  font-size: 5em;
+  text-transform: lowercase;
+  font-weight: bold;
+  width: 30rem;
+  text-align: center;
+}
+
+.imgTags {
+  font-size: 2em;
+  margin-top: 2rem;
+  text-transform: lowercase;
+  font-weight: 300;
+}
+
+/**************************************/
+/*ABOUT*/
+/**************************************/
+.sectionAbout {
+}
+
+.wrap {
+  width: 90%;
+  min-height: 70vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 2fr 2fr;
+}
+
+.aboutSectionOne .wrap {
+  width: 100%;
+}
+
+.aboutSectionOne .pageBody {
+  width: 100%;
+}
+
+.aboutSectionTwo {
+  background-color: var(--mainBlue);
+  z-index: 0;
+}
+
+.aboutSectionTwo .wrap {
+  justify-items: start;
+}
+
+.aboutSectionTwo .pageBody {
+  color: white;
+  width: 100%;
+}
+
+.aboutSectionThree {
+  background-color: var(--mainPurple);
+}
+
+.aboutSectionThree .wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 5rem;
+  margin-left: 5rem;
+}
+
+.aboutMainImg,
+.aboutSecondImg {
+  width: 100%;
+}
+
+.frame {
+  position: relative;
+  width: 90%;
+  transition: all 0.3;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  box-sizing: border-box;
+  border: 5px solid var(--mainPurple);
+  transform: translate(-30px, 31px);
+  transition: transform 150ms;
+}
+
+/* .frame:hover {
+  transform: scale(1.2);
+} */
+
+.frame:hover::before {
+  /* display: none; */
+  transform: translate(-20px, 21px);
+}
+
+.aboutSectionTwo .frame {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutSectionTwo .frame::before {
+  border: 5px solid var(--lightBlueGreen);
+}
+
+.aboutSocial {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.aboutList {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.boxName {
+  font-size: 6rem;
+  font-weight: 600;
+  justify-items: end;
+  text-align: right;
+  justify-self: center;
+}
+
+.i,
+.item .pageBody,
+.itemName,
+.boxName {
+  color: white;
+}
+
+.item .pageBody {
+  font-size: 1.7rem;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  gap: 3rem;
+}
+
+.itemText {
+  max-width: 50rem;
+  min-width: 30rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.i {
+  font-size: 8rem;
+  align-self: center;
+  text-align: center;
+  margin-top: -2rem;
+  align-self: flex-start;
+}
+
+.item .pageBody {
+}
+
+.itemName {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/**************************************/
+/*CONTACT*/
+/**************************************/
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+}
+
+.sectionContact .pageBody {
+  margin: 0;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form > * {
+  width: 100%;
+  font-size: 2.4rem;
+}
+
+.submit {
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.name,
+.email,
+.message {
+  border-bottom: 2px solid var(--darkPurple);
+  padding: 1rem;
+}
+
+.name,
+.name:active,
+.name:focus,
+.email,
+.email:active,
+.email:focus {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid var(--darkPurple);
+}
+
+.message {
+  border-radius: 1rem;
+  border: 2px solid var(--darkPurple);
+  width: 100%;
+  height: 9em;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  flex-basis: 70%;
+}
+
+.contactImg img {
+  object-fit: cover;
+  object-position: right;
+  height: 100vh;
+  width: 100%;
+}
+
+.formWrap,
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  flex-basis: 70%;
+}
+
+.cLinks {
+  max-width: 65%;
+  align-self: center;
+}
+
+.cSocials {
+  display: flex;
+  width: 100%;
+}
+
+.cSocials a {
+  color: var(--darkBlue);
+  width: 15rem;
+  font-size: 6rem;
+}
+
+.cSocials a:hover {
+  color: var(--darkProjectColor);
+}
+/**************************************/
+/*PROJECT PAGE*/
+/**************************************/
+.image-zoom-wrapper::after {
+  background-color: var(--darkProjectColor);
+}
+.mainProjectContent {
+  display: grid;
+}
+
+.topVideo {
+  /* min-width: 80%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+}
+
+.topVideo iframe {
+  /* width: 100%;
+  height: 100%; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.projectHeading {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+
+.arrowBtn {
+  color: var(--darkPurple);
+}
+
+.projectHeading .pageHeading {
+  font-size: 6rem;
+  margin-top: 2.5rem;
+  width: 90%;
+}
+
+.back {
+  font-size: 8rem;
+  color: var(--darkPurple);
+}
+
+.back:hover {
+  color: var(--mainBlue);
+}
+
+.titleTag {
+  padding: 1rem;
+  width: 100%;
+}
+
+.tag {
+  font-size: 2.4rem;
+  background-color: var(--lightProjectColor);
+  color: var(--darkProjectColor);
+  padding: 1rem;
+}
+
+.tag:hover {
+  background-color: var(--darkProjectColor);
+  color: var(--lightProjectColor);
+}
+
+.projectImg {
+  width: 100%;
+  height: 50rem;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.projectIntro {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  background-color: var(--darkPurple);
+}
+
+.introTxtContainer {
+  width: 100%;
+  height: auto;
+  background-color: var(--darkProjectColor);
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.introText {
+  color: var(--lightProjectColor);
+}
+
+.headerContentTextBox,
+.introText {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textAlone {
+}
+
+.textAlone,
+.headerContentText {
+  width: 100%;
+  padding-top: var(--defaultMarginTop);
+  padding-bottom: var(--defaultMarginTop);
+}
+
+.textAlone .pageBody {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerContentTextBox {
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contentWText {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: var(--defaultMarginTop);
+  padding-bottom: var(--defaultMarginTop);
+  gap: 10rem;
+  align-items: center;
+}
+
+.contentWText .pageBody {
+  color: var(--darkProjectColor);
+  width: 50%;
+}
+
+.contentWText .frame::before {
+  border: 5px solid var(--lightProjectColor);
+}
+
+.contentWTextBox,
+.contentWTextBoxCol {
+  width: 77%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 6rem;
+}
+
+.contentWTextBoxCol {
+  flex-direction: column;
+}
+
+.contentWTextBox:nth-child(even) {
+  background-color: var(--darkProjectColor);
+}
+
+.contentWTextBox:nth-child(even) .pageBody {
+  order: 2;
+  color: var(--lightProjectColor);
+}
+
+.contentWTextBox:nth-child(even) .frame {
+  order: 1;
+}
+
+.vertVideo {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 90vh; */
+}
+
+.vertVideoText {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.vertVideoText .vertVideo {
+  height: 80vh;
+}
+
+.vertVideoText .pageBody,
+.topVertVideo {
+  width: 100%;
+}
+
+.horizVideo,
+.leftText {
+  width: 50%;
+}
+
+.horizVideoBig,
+.contentImg {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bigOlImg,
+.bigOlImgNoBg,
+.bigOlImgMulti,
+.bigOlImgMultiNoBg {
+  text-align: center;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.multiImg {
+  gap: 3rem;
+  padding: 5rem;
+  display: flex;
+}
+
+.multiImg img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 1;
+  object-fit: contain;
+}
+
+.multiImg .three {
+  height: 30vw;
+}
+
+.bigOlImg,
+.bigOlImgMulti {
+  background-color: var(--lightProjectColor);
+}
+
+.textAlone .bigOlImgNoBg {
+  height: auto;
+}
+
+.bigOlImg img,
+.bigOlImgNoBg img {
+  /* width: 60%; */
+  height: 90vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.bigOlImg .horizImg,
+.bigOlImgNoBg .horizImg,
+.bigOlImgNoBg .horizImg {
+  height: auto;
+}
+
+.bigOlImg .squareImg,
+.bigOlImgNoBg .squareImg {
+  height: 80vh;
+}
+/*Photo Grid */
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+  width: 95%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--defaultMarginTop);
+  margin-bottom: var(--defaultMarginTop);
+}
+
+.wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.wider {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bigger {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+/* .wide:hover,
+.tall:hover,
+.small:hover,
+.big:hover {
+  filter: grayscale();
+} */
+/* 
+.thumbnail {
+  transition: all 0.3s ease;
+} */
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  object-position: center;
+}
+
+/*Slider*/
+/*coming back to this with JS*/
+
+.imgSlider {
+  padding: 6rem;
+}
+
+.slider {
+  max-width: 100%;
+  height: 75rem;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: center;
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
+
+/*prev next page*/
+
+.pageNav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--defaultMarginTop);
+  margin-bottom: var(--defaultMarginTop);
+}
+
+.logoHome .logo {
+  width: 15rem;
+}
+
+.next,
+.prev {
+  font-size: 8rem;
+}
+
+.pageNavLink {
+  color: var(--darkPurple);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.pageNavLink p {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.pageNavLink:hover {
+  color: var(--mainBlue);
+}
